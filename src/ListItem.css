@@ -1,0 +1,41 @@
+.notes-list {
+	padding: 1em;
+	list-style: none;
+	font-size: 1.2rem;
+	background-color: rgba(141, 97, 97, 0.291);
+	border-radius: 8px;
+	margin-top: 0.5em;
+
+
+}
+
+.notes-container {
+    display: flex;
+    justify-content: space-around;
+	align-items: center;
+    padding: .5em;
+	border: 1px solid rgba(215, 203, 203, 0.537);
+	margin-top: .5em;
+}
+
+.notes-item {
+	display: flex;
+    justify-content: center;
+	align-items: center;
+    text-align: center;
+    width: 300px;
+	line-height: 30px;
+
+}
+
+.notes-item-is-done {
+	text-decoration: line-through;
+	font-style: italic;
+}
+
+.notes-list-btn {
+	padding: 1em;
+	margin: 0.5em;
+	border-radius: 8px;
+	cursor: pointer;
+}

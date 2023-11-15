@@ -1,0 +1,16 @@
+.addNote {
+	background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.addNote img {
+    width: 6em;
+    transition: transform .3s;
+}
+
+.addNote img:hover {
+    transform: rotate(100deg) scale(1.1);
+
+}
