@@ -7,7 +7,7 @@ To start working with this project, follow these simple steps:
 ### 1. Clone the Repository
 
 ```bash
-git clone [repository_url]
+git clone https://github.com/WojciechStancel/React_TODO.git
 ```
 
 ### 2. Install Dependencies
