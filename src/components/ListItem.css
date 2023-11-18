@@ -1,0 +1,8 @@
+.notes-list {
+	padding: 1em;
+	list-style: none;
+	font-size: 1.2rem;
+	background-color: rgba(141, 97, 97, 0.291);
+	border-radius: 8px;
+	margin-top: 0.5em;
+}

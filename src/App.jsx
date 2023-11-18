@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./Notes.css";
-import "./App.css";
-import ListItem from "./ListItem";
 
-import AddNoteForm from "./AddNoteForm";
-import NotesHeader from "./NotesHeader";
+import './App.css';
+import ListItem from "./components/ListItem";
+
+import AddNoteForm from "./components/AddNoteForm";
+import NotesHeader from "./components/NotesHeader";
 
 const notesList = [
 	{ id: 1, body: "Pozmywać naczynia i wynieść śmieci", added: new Date() },
@@ -30,10 +30,7 @@ function App() {
 					isFormShown={isFormShown}
 					setFormShown={setFormShown}
 				/>
-				<ListItem
-				taskList={taskList}
-				handleRemoveNote={handleRemoveNote}
-				/>
+				<ListItem taskList={taskList} handleRemoveNote={handleRemoveNote} />
 
 				{isFormShown && (
 					<AddNoteForm

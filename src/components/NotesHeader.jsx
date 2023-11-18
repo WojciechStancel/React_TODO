@@ -1,8 +1,8 @@
-import './NotesHeader.css'
+import "./NotesHeader.css";
 import AddButton from "./AddButton";
-import noteImg from "./assets/notebook.svg";
+import noteImg from "../assets/notebook.svg";
 
-const NotesHeader = ({taskList, isFormShown, setFormShown}) => {
+const NotesHeader = ({ taskList, isFormShown, setFormShown }) => {
 	return (
 		<div className="notes-header">
 			<h1>

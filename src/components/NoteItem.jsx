@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import "./NoteItem.css";
 const NoteItem = ({ note, handleRemoveNote }) => {
 	const [isDone, setIsDone] = useState(false);
 

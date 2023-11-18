@@ -1,5 +1,5 @@
 import "./AddNoteForm.css";
-import closeImg from "./assets/x.svg";
+import closeImg from "../assets/x.svg";
 
 const AddNoteForm = ({ taskList, task, setTask, setFormShown }) => {
 	function handleSubmitForm(e) {
