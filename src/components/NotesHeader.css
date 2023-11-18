@@ -10,15 +10,33 @@
 	);
 }
 
+.notes-header img {
+	width: 1em;
+}
+
 .notes-header h1 {
-	font-size: 2rem;
+	font-size: 1.2rem;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	padding: 0.5em;
 }
 
 .notes-header p {
-	font-size: 1.3rem;
+	font-size: 0.8rem;
 	margin: 0.5em 0;
 	text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+	.notes-header img {
+		width: 1.3em;
+	}
+
+	.notes-header h1 {
+		font-size: 1.8rem;
+	}
+
+	.notes-header p {
+		font-size: 1.2rem;
+	}
 }
