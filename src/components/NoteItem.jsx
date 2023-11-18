@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./NoteItem.css";
+import IsDoneItem from "./IsDoneItem";
 const NoteItem = ({ note, handleRemoveNote }) => {
 	const [isDone, setIsDone] = useState(false);
 
@@ -10,15 +11,9 @@ const NoteItem = ({ note, handleRemoveNote }) => {
 	return (
 		<li className={`notes-container `}>
 			{isDone ? (
-				<p className="notes-item notes-item-is-done">
-					{note.body} <br />
-					Dodana: {note.added.toLocaleDateString()}
-				</p>
+				<IsDoneItem className="notes-item notes-item-is-done" note={note} />
 			) : (
-				<p className="notes-item">
-					{note.body} <br />
-					Dodana: {note.added.toLocaleDateString()}
-				</p>
+				<IsDoneItem className="notes-item" note={note} />
 			)}
 
 			<div>
