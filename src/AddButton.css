@@ -6,11 +6,11 @@
 }
 
 .addNote img {
-    width: 6em;
+    width: 5em;
     transition: transform .3s;
 }
 
 .addNote img:hover {
-    transform: rotate(100deg) scale(1.1);
+    transform: scale(1.1);
 
 }

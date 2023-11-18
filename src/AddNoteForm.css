@@ -1,0 +1,63 @@
+.addNoteForm {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 600px;
+	height: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 8px;
+	border: 1px solid rgb(0, 38, 151);
+	color: black;
+	background-color: rgba(245, 242, 242, 0.985);
+	transition: opacity 0.4s;
+}
+
+.addNoteForm img {
+	position: absolute;
+	padding: 1em;
+    width: 3.5em;
+	top: 10px;
+	right: 10px;
+    cursor: pointer;
+    transition: transform .3s;
+}
+
+.addNoteForm img:hover {
+    transform: rotate(120deg);
+}
+
+.addNoteForm label {
+	font-size: 1.5rem;
+}
+
+.addNoteForm input {
+	height: 200px;
+	width: 400px;
+	margin: 1em 0;
+	text-align: center;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+.addNoteForm button {
+	padding: 1em 2em;
+	margin: 0.5em;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.addNoteForm button:hover {
+	background-color: rgb(3, 61, 112);
+	color: white;
+}
+
+.addNoteForm button:disabled:hover {
+	cursor: not-allowed;
+	color: inherit;
+	background-color: inherit;
+}

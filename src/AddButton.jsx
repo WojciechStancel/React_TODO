@@ -1,4 +1,4 @@
-import iconImg from "./assets/plus.svg";
+import iconImg from "./assets/pencil-plus.svg";
 import "./AddButton.css";
 
 const AddButton = ({ formShown, setter }) => {

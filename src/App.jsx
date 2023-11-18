@@ -17,10 +17,9 @@ function App() {
 	const [task, setTask] = useState("");
 	const [taskList, setTaskList] = useState(notesList);
 
-
 	function handleRemoveNote(id) {
 		const updatedList = taskList.filter((note) => note.id !== id);
-    setTaskList(updatedList)
+		setTaskList(updatedList);
 	}
 
 	return (
@@ -32,11 +31,8 @@ function App() {
 					setFormShown={setFormShown}
 				/>
 				<ListItem
-
-					taskList={taskList}
-
-          handleRemoveNote={handleRemoveNote}
-
+				taskList={taskList}
+				handleRemoveNote={handleRemoveNote}
 				/>
 
 				{isFormShown && (
@@ -44,7 +40,7 @@ function App() {
 						task={task}
 						setTask={setTask}
 						taskList={taskList}
-            setFormShown={setFormShown}
+						setFormShown={setFormShown}
 					/>
 				)}
 			</div>
