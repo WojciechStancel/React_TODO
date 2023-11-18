@@ -1,6 +1,8 @@
 import { useState } from "react";
-import "./NoteItem.css";
+import "./NoteItems.css";
 import IsDoneItem from "./IsDoneItem";
+import IsDoneBtn from "./IsDoneBtn";
+import RemoveNoteBtn from "./RemoveNoteBtn";
 const NoteItem = ({ note, handleRemoveNote }) => {
 	const [isDone, setIsDone] = useState(false);
 
@@ -18,22 +20,21 @@ const NoteItem = ({ note, handleRemoveNote }) => {
 
 			<div>
 				{isDone ? (
-					<button
+					<IsDoneBtn
 						className="notes-list-btn notes-item-is-done"
-						onClick={handleDoneNote}>
+						handleDoneNote={handleDoneNote}>
 						Cofnij
-					</button>
+					</IsDoneBtn>
 				) : (
-					<button className="notes-list-btn" onClick={handleDoneNote}>
+					<IsDoneBtn className="notes-list-btn" handleDoneNote={handleDoneNote}>
 						Zrobione
-					</button>
+					</IsDoneBtn>
 				)}
 
-				<button
-					className="notes-list-btn"
-					onClick={() => handleRemoveNote(note.id)}>
-					Usuń
-				</button>
+				<RemoveNoteBtn
+					handleRemoveNote={() => handleRemoveNote(note.id)}
+					note={note}
+				/>
 			</div>
 		</li>
 	);

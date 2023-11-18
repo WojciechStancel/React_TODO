@@ -2,7 +2,6 @@ import { useState } from "react";
 
 import './App.css';
 import ListItem from "./components/ListItem";
-
 import AddNoteForm from "./components/AddNoteForm";
 import NotesHeader from "./components/NotesHeader";
 
