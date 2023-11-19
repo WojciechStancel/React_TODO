@@ -1,40 +1,38 @@
 import { useState } from "react";
 import "./NoteItems.css";
 import IsDoneItem from "./IsDoneItem";
-import IsDoneBtn from "./IsDoneBtn";
-import RemoveNoteBtn from "./RemoveNoteBtn";
-const NoteItem = ({ note, handleRemoveNote }) => {
+import NoteButton from "./NoteButton";
+const NoteItem = ({ note, taskList, setTaskList }) => {
 	const [isDone, setIsDone] = useState(false);
 
 	const handleDoneNote = () => {
 		setIsDone(!isDone);
 	};
 
+	function handleRemoveNote(id) {
+		const updatedList = taskList.filter((note) => note.id !== id);
+		setTaskList(updatedList);
+	}
+
 	return (
-		<li className={`notes-container `}>
-			{isDone ? (
-				<IsDoneItem className="notes-item notes-item-is-done" note={note} />
-			) : (
-				<IsDoneItem className="notes-item" note={note} />
-			)}
-
-			<div>
-				{isDone ? (
-					<IsDoneBtn
-						className="notes-list-btn notes-item-is-done"
-						handleDoneNote={handleDoneNote}>
-						Cofnij
-					</IsDoneBtn>
-				) : (
-					<IsDoneBtn className="notes-list-btn" handleDoneNote={handleDoneNote}>
-						Zrobione
-					</IsDoneBtn>
-				)}
-
-				<RemoveNoteBtn
-					handleRemoveNote={() => handleRemoveNote(note.id)}
+		<li className="notes-container">
+			{
+				<IsDoneItem
+					className={isDone ? "notes-item-is-done" : ""}
 					note={note}
 				/>
+			}
+
+			<div>
+				{
+					<NoteButton
+						className={isDone ? "notes-item-is-done" : ""}
+						onClick={handleDoneNote}>
+						{isDone ? "Cofnij" : "Zrobione"}
+					</NoteButton>
+				}
+
+				<NoteButton onClick={() => handleRemoveNote(note.id)}>Usuń</NoteButton>
 			</div>
 		</li>
 	);

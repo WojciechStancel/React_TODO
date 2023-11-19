@@ -4,7 +4,7 @@ import closeImg from "../assets/x.svg";
 const AddNoteForm = ({ taskList, task, setTask, setFormShown }) => {
 	function handleSubmitForm(e) {
 		e.preventDefault();
-		const newTask = { id: taskList.length + 1, body: task, added: new Date() };
+		const newTask = { id: Math.random(), body: task, added: new Date() };
 		taskList.push(newTask);
 		setFormShown(false);
 		setTask("");
@@ -12,7 +12,14 @@ const AddNoteForm = ({ taskList, task, setTask, setFormShown }) => {
 
 	return (
 		<form onSubmit={handleSubmitForm} className="addNoteForm">
-			<img src={closeImg} onClick={()=> setFormShown(false) || setTask('')} />
+			<img
+				src={closeImg}
+				alt="close button"
+				onClick={() => {
+					setFormShown(false);
+					setTask("");
+				}}
+			/>
 			<label htmlFor="inputNote">Wprowadź nową notatkę 😎</label>
 			<input
 				type="text"

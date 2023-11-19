@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import './App.css';
+import "./App.css";
 import ListItem from "./components/ListItem";
 import AddNoteForm from "./components/AddNoteForm";
 import NotesHeader from "./components/NotesHeader";
@@ -16,11 +16,6 @@ function App() {
 	const [task, setTask] = useState("");
 	const [taskList, setTaskList] = useState(notesList);
 
-	function handleRemoveNote(id) {
-		const updatedList = taskList.filter((note) => note.id !== id);
-		setTaskList(updatedList);
-	}
-
 	return (
 		<>
 			<div className="notes">
@@ -29,7 +24,7 @@ function App() {
 					isFormShown={isFormShown}
 					setFormShown={setFormShown}
 				/>
-				<ListItem taskList={taskList} handleRemoveNote={handleRemoveNote} />
+				<ListItem taskList={taskList} setTaskList={setTaskList} />
 
 				{isFormShown && (
 					<AddNoteForm
