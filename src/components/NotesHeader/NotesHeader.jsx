@@ -1,6 +1,6 @@
 import "./NotesHeader.css";
-import AddButton from "./AddButton";
-import noteImg from "../assets/notebook.svg";
+import AddButton from "../AddButton/AddButton";
+import noteImg from "../../assets/notebook.svg";
 
 const NotesHeader = ({ taskList, isFormShown, setFormShown }) => {
 	return (

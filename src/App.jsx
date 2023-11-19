@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 import "./App.css";
-import ListItem from "./components/ListItem";
-import AddNoteForm from "./components/AddNoteForm";
-import NotesHeader from "./components/NotesHeader";
+import ListItem from "./components/ListItem/ListItem";
+import AddNoteForm from "./components/AddNoteForm/AddNoteForm";
+import NotesHeader from "./components/NotesHeader/NotesHeader";
 
 const notesList = [
 	{ id: 1, body: "Pozmywać naczynia i wynieść śmieci", added: new Date() },
@@ -13,7 +13,6 @@ const notesList = [
 
 function App() {
 	const [isFormShown, setFormShown] = useState(false);
-	const [task, setTask] = useState("");
 	const [taskList, setTaskList] = useState(notesList);
 
 	return (
@@ -27,12 +26,7 @@ function App() {
 				<ListItem taskList={taskList} setTaskList={setTaskList} />
 
 				{isFormShown && (
-					<AddNoteForm
-						task={task}
-						setTask={setTask}
-						taskList={taskList}
-						setFormShown={setFormShown}
-					/>
+					<AddNoteForm taskList={taskList} setFormShown={setFormShown} />
 				)}
 			</div>
 		</>

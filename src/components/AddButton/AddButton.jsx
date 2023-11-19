@@ -1,4 +1,4 @@
-import iconImg from "../assets/pencil-plus.svg";
+import iconImg from "../../assets/pencil-plus.svg";
 import "./AddButton.css";
 
 const AddButton = ({ formShown, setter }) => {
@@ -8,7 +8,6 @@ const AddButton = ({ formShown, setter }) => {
 	return (
 		<button onClick={handleNoteForm} className="addNote">
 			<img src={iconImg} />
-
 		</button>
 	);
 };

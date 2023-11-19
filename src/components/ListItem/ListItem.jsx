@@ -1,5 +1,5 @@
 import "./ListItem.css";
-import NoteItem from "./NoteItems/NoteItem";
+import NoteItem from "../NoteItems/NoteItem";
 
 const ListItem = ({ taskList, setTaskList }) => {
 	return (

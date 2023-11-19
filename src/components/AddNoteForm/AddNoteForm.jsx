@@ -1,7 +1,10 @@
 import "./AddNoteForm.css";
-import closeImg from "../assets/x.svg";
+import closeImg from "../../assets/x.svg";
+import { useState } from "react";
 
-const AddNoteForm = ({ taskList, task, setTask, setFormShown }) => {
+const AddNoteForm = ({ taskList, setFormShown }) => {
+	const [task, setTask] = useState("");
+
 	function handleSubmitForm(e) {
 		e.preventDefault();
 		const newTask = { id: Math.random(), body: task, added: new Date() };
