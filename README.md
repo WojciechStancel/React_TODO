@@ -1,5 +1,9 @@
 # React + Vite
 
+## This is a simple app to create your own to-do list 📔 You can add notes, mark them as a done and remove them. There is no database connection. Basic data is stored in the JS list <img width="20px" src="https://github.com/WojciechStancel/React_TODO/assets/121879383/3b721cdf-0807-4f7a-a9ad-fa0cd00e59c7"/>
+
+## The application was created after I finished some modules of a course - [Zrozumieć React ![image](https://github.com/WojciechStancel/React_TODO/assets/121879383/9c59729f-e12c-4877-80c8-1ae2ce358b5a)](https://zrozumiecreact.pl/) It is a Polish course that has been created by fantastic people. App was made completely by myself to practise all the main functionalities like components, useState.
+
 ## Getting Started
 
 To start working with this project, follow these simple steps:
